@@ -1,0 +1,10 @@
+Executables examined using Ghidra
+
+0x00 Password found in main; 250382
+0x01 Password is int 0x149a, or decimal 5274
+0x02 Password is 0x52b24, or decimal 338724
+0x03 Password is the same as in 0x02
+0x04 Password needs to sum to 0xf, or 15, I used 69
+0x05 Password need to sum to 0x10, and needs to & with 1 to equal 0; 88 works, as does 4444
+0x06 Takes an environment char** _Env; Environment variable is LOL, set LOL=b1h0, then use password from 0x05
+0x07 Looks like symbols are stripped off; Look for decompile function block that most resembles main, then trace control backwards; same solution as 0x06
